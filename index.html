@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor Follower -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="logo-container">
+                <span class="logo-text">Dev</span>
+                <span class="logo-dot"></span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-item">
+                    <span class="nav-number">01</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#about" class="nav-item">
+                    <span class="nav-number">02</span>
+                    <span class="nav-text">About</span>
+                </a>
+                <a href="#projects" class="nav-item">
+                    <span class="nav-number">03</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+                <a href="#skills" class="nav-item">
+                    <span class="nav-number">04</span>
+                    <span class="nav-text">Skills</span>
+                </a>
+                <a href="#contact" class="nav-item">
+                    <span class="nav-number">05</span>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Hi I'm</span>
+                    <span class="title-line title-gradient">Muhammad</span>
+                    <span class="title-line">Irfan Maulana</span>
+                </h1>
+                <p class="hero-description">
+                    Crafting beautiful digital experiences with cutting-edge technology.
+                    Specialized in creating innovative web applications that make a difference.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">
+                        <span>View My Work</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&h=1000&fit=crop&q=80" alt="Hero">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="floating-card card-1">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-text">Fast & Efficient</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-text">Creative Design</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">💡</div>
+                    <div class="card-text">Innovative Solutions</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80" alt="Workspace">
+                        <div class="image-shape"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text">
+                        Hi! I'm a passionate software engineer with over 5 years of experience in building 
+                        exceptional digital experiences. I specialize in creating responsive, user-centric 
+                        applications that combine beautiful design with powerful functionality.
+                    </p>
+                    <p class="about-text">
+                        My journey in tech started with a curiosity about how things work, and it has evolved 
+                        into a career where I get to solve complex problems and create solutions that make a 
+                        real impact.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
+            <div class="skills-container" id="skills-container">
+                <!-- Skills will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Get in touch</h3>
+                    <p class="contact-description">
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">hello@developer.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-text">
+                                <div class="contact-label">Phone</div>
+                                <div class="contact-value">+62 877 2083 3322</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <div class="contact-label">Location</div>
+                                <div class="contact-value">Malang, Indonesia</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Dribbble</a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span>Send Message</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    © 2025 Developer Portfolio. Crafted with passion.
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Back to top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
